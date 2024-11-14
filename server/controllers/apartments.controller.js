@@ -1,4 +1,4 @@
-import Apartment from '../models/apartment.js';
+import Apartment from '../models/apartments.js';
 
 export const createNewApartment = async (req, res) => {
   try {

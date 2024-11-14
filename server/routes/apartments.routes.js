@@ -1,5 +1,5 @@
 import express from 'express';
-import { createNewApartment, getAllApartments } from '..server/controllers/apartments.controller.js';
+import { createNewApartment, getAllApartments } from '../controllers/apartments.controller.js';
 
 const router = express.Router();
 
