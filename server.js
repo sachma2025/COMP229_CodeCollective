@@ -1,11 +1,12 @@
 import config from './config/config.js' 
 import app from './server/express.js'
-import mongoose from 'mongoose' 
+import mongoose from 'mongoose'
+import apartmentsRoutes from './routes/apartments.routes.js';
 mongoose.Promise = global.Promise
 mongoose.connect(config.mongoUri, { 
-    //useNewUrlParser: true,
+    useNewUrlParser: true,
 //useCreateIndex: true, 
-//useUnifiedTopology: true
+useUnifiedTopology: true
  } )
 
 .then(() => {
@@ -23,6 +24,8 @@ app.get("/", (req, res) => {
         }
     );
 });
+app.use(express.json());
+app.use('/apartments', apartmentsRoutes);
 app.listen(config.port, (err) => { 
 if (err) {
 console.log(err) 
