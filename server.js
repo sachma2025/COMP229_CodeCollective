@@ -3,6 +3,7 @@ import config from './config/config.js'
 import app from './server/express.js'
 import mongoose from 'mongoose'
 import apartmentsRoutes from './server/routes/apartments.routes.js'
+import usersRoutes from './server/routes/user.routes.js'
 mongoose.Promise = global.Promise
 mongoose.connect(config.mongoUri, { 
     useNewUrlParser: true,
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
     );
 });
 app.use('/apartments', apartmentsRoutes);
+app.use('/users', usersRoutes);
 app.listen(config.port, (err) => { 
 if (err) {
 console.log(err) 
