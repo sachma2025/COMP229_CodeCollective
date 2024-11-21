@@ -13,3 +13,7 @@ main {
   min-height: 84vh;
 }
 
+button {
+  background: none;
+  border: none;
+}
