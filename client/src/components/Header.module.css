@@ -1,4 +1,3 @@
-/* src/components/Header.module.css */
 .header {
   display: flex;
   align-items: center;
@@ -6,7 +5,17 @@
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
-}
+  }
+
+  .header > div {
+    height: 3rem;
+    width: auto;
+  }
+
+  .header > div > img {
+    height: 100%;
+    width: auto;
+  }
 
 .logo {
   font-size: 1.5rem;
@@ -20,10 +29,24 @@
 
 .navLink {
   color: #fff;
-  text-decoration: none;
   font-size: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.navBtn {
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.navBtn:hover {
+  border-bottom: 1px solid #fff;
 }
 
 .navLink:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #fff;
 }
