@@ -2,10 +2,7 @@ import express from 'express';
 import config from './config/config.js';
 import app from './server/express.js';
 import mongoose from 'mongoose';
-<<<<<<< HEAD
 import apartmentsRoutes from './server/routes/apartments.routes.js';
-=======
->>>>>>> 7e8834c0bf68413923bc7bbed9fab30b41fb3478
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -31,11 +28,8 @@ mongoose.connection.on('error', () => {
     throw new Error(`Unable to connect to database: ${config.mongoUri}`);
 });
 
-<<<<<<< HEAD
 app.use('/api/apartments', apartmentsRoutes);
 
-=======
->>>>>>> 7e8834c0bf68413923bc7bbed9fab30b41fb3478
 app.use(express.static(path.join(__dirname, 'client/dist')));
 
 app.get('*', (req, res) => {
