@@ -9,13 +9,12 @@ const Header = () => {
   const handleAuthentication = () => {
     setIsAuthenticated((prev) => !prev);
     navigate("/");
-
   }
 
   return (
     <header className={styles.header}>
       <div> <img src='/images/logo/CodeCollective-logo.jpg' alt='code collective logo' /></div>
-      <div className={styles.logo}>The Listing Company</div>
+      <div className={styles.logo}><p>The Listing Company</p></div>
       <nav className={styles.nav}>
         <Link to="/" className={styles.navLink}>Home</Link>
         {isAuthenticated ?
@@ -23,7 +22,7 @@ const Header = () => {
             <Link to="/users" className={styles.navLink}>Users</Link>
             <Link to="/apartments" className={styles.navLink}>Apartments</Link>
             <button onClick={handleAuthentication} className={styles.navBtn}>Sign Out </button>
-          </> 
+          </>
         :
           <>
             <Link onClick={handleAuthentication} to="/login" className={styles.navLink}>Login</Link>

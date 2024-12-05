@@ -1,8 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+
 import RootPage from "./pages/RootPage";
 import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
 import UserPage from "./pages/UserPage";
+import LoginPage from "./pages/LoginPage";
+import CreateUser from "./pages/CreateUser";
 import ApartmentsPage from "./pages/ApartmentsPage";
 
 
@@ -15,6 +17,7 @@ import ApartmentsPage from "./pages/ApartmentsPage";
         { path: "login", element: <LoginPage /> },
         { path: "users", element: <UserPage /> },
         { path: "apartments", element: <ApartmentsPage /> },
+        { path: "create-user", element: <CreateUser /> },
       ]
     }
   ]);

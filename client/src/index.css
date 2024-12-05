@@ -6,20 +6,24 @@
   --border-radius: 8px; /* Rounded corners for elements */
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--text-color);
-  background-color: var(--background-color);
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-h1, h2, h3 {
+body {
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+}
+
+/* h1, h2, h3 {
   color: var(--primary-color);
   font-family: 'Lora', serif;
-}
+} */
 
-button {
+/* button {
   font-size: 1rem;
   padding: 10px 20px;
   background-color: var(--primary-color);
@@ -28,9 +32,9 @@ button {
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: all 0.3s ease;
-}
+} */
 
-button:hover {
+/* button:hover {
   background-color: var(--secondary-color);
   transform: scale(1.05);
-}
+} */
