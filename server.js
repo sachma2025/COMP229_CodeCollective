@@ -3,6 +3,7 @@ import config from './config/config.js';
 import app from './server/express.js';
 import mongoose from 'mongoose';
 import apartmentsRoutes from './server/routes/apartments.routes.js';
+import userRoutes from './server/routes/user.routes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -29,6 +30,8 @@ mongoose.connection.on('error', () => {
 });
 
 app.use('/api/apartments', apartmentsRoutes);
+
+app.use('/api/users', userRoutes);
 
 app.use(express.static(path.join(__dirname, 'client/dist')));
 

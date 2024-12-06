@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-
-import axios from 'axios';
+import { createUser } from '../api/userApi';
 import styles from './CreateUser.module.css'
 
 function CreateUser() {
@@ -13,7 +12,7 @@ function CreateUser() {
     email: "",
     phone: "",
     password: "",
-    cpassword: ""
+    cpassword: "",
   })
 
   const handleInputChange = (e) => {
@@ -26,10 +25,19 @@ function CreateUser() {
 
   const handleCreateUser = async (e) => {
     e.preventDefault();
+    const userPayload = {
+      name: `${formData.fname} ${formData.lname}`,
+      email: formData.email,
+      phone: formData.phone,
+      password: formData.password,
+    };
     try {
-      const response = await axios.post('http://localhost:3000/auth/create', { formData });
-      localStorage.setItem('token', response.data.token);
-      navigate('/login');
+      const response = await createUser(userPayload);
+      if (response.status === 200) {
+        navigate('/login');
+      } else {
+        setError('Failed to create user. Please try again.');
+      }
     } catch (err) {
       setError('Something went wrong. Please try again!');
       console.error(err);
