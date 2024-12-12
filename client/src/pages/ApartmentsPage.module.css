@@ -1,4 +1,4 @@
-.apartmentsPage {
+/*.apartmentsPage {
   padding: 20px;
 }
 
@@ -25,4 +25,199 @@
 .table th {
   background-color: #333;
   color: #fff;
+}*/
+.apartmentsPage {
+  background-color: #141414;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://tse2.mm.bing.net/th?id=OIP.vO0YdyYadeimNeFVkKugqwHaE8&pid=Api&P=0&h=220') no-repeat center center/cover;
+  padding: 100px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(20,20,20,0.6));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Create Apartment Section */
+.createApartmentSection {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.createApartmentSection h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.createApartmentForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.createApartmentForm input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 0.9rem;
+}
+
+.createApartmentForm input:focus {
+  outline: none;
+}
+
+.createApartmentForm button {
+  padding: 10px 20px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.createApartmentForm button:hover {
+  background: #2563eb;
+}
+
+/* Cards Grid */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.cardContent {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #fbbf24;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.details {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.sizeInfo {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.cardActions {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.updateBtn, .deleteBtn {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.updateBtn:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+}
+
+.deleteBtn:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2.25rem;
+  }
+
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+
+  .createApartmentSection h2 {
+    font-size: 1.75rem;
+  }
 }
