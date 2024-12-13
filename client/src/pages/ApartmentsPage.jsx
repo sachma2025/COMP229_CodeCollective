@@ -147,8 +147,8 @@ const ApartmentsPage = () => {
     <div className={styles.apartmentsPage}>
       <div className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1>Your Next Home Awaits</h1>
-          <p>Discover a wide range of apartments and find the perfect place to call home.</p>
+          <h1>WELCOME TO A NEW EXPERIENCE </h1>
+          <p>Create the  perfect place to call home for others .</p>
         </div>
       </div>
 
