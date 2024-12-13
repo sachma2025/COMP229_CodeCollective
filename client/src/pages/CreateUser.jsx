@@ -8,11 +8,11 @@ function CreateUser() {
   const [error, setError] = useState('');
   const [ formData, setFormaData ] = useState({
     fname: "",
-    lname: "",
+
     email: "",
-    phone: "",
-    password: "",
-    cpassword: "",
+
+    password: ""
+
   })
 
   const handleInputChange = (e) => {
@@ -26,9 +26,9 @@ function CreateUser() {
   const handleCreateUser = async (e) => {
     e.preventDefault();
     const userPayload = {
-      name: `${formData.fname} ${formData.lname}`,
+      name: `${formData.fname}`,
       email: formData.email,
-      phone: formData.phone,
+
       password: formData.password,
     };
     try {
@@ -61,16 +61,7 @@ function CreateUser() {
                 required
               />
             </div>
-            <div className={styles.formGroup}>
-              <label>Last Name</label>
-              <input
-                type="text"
-                name="lname"
-                value={formData.lname}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
+
           </div>
           <div>
             <div className={styles.formGroup}>
@@ -83,16 +74,7 @@ function CreateUser() {
                 required
               />
             </div>
-            <div className={styles.formGroup}>
-              <label>Phone</label>
-              <input
-                type="text"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
+
           </div>
           <div>
             <div className={styles.formGroup}>
@@ -105,16 +87,7 @@ function CreateUser() {
                 required
               />
             </div>
-            <div className={styles.formGroup}>
-              <label>Confirm password</label>
-              <input
-                type="password"
-                name="cpassword"
-                value={formData.cpassword}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
+
           </div>
           <div>
             <button type="submit" className={styles.loginButton}>Create user</button>
