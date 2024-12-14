@@ -7,7 +7,7 @@ function CreateUser() {
   const navigate = useNavigate();
   const [error, setError] = useState('');
   const [ formData, setFormaData ] = useState({
-    fname: "",
+    name: "",
 
     email: "",
 
@@ -52,10 +52,10 @@ function CreateUser() {
         <form onSubmit={handleCreateUser} className={styles.form}>
           <div>
             <div className={styles.formGroup}>
-              <label>First Name</label>
+              <label> Name</label>
               <input
                 type="text"
-                name="fname"
+                name="name"
                 value={formData.fname}
                 onChange={handleInputChange}
                 required
